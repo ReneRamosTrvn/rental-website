@@ -17,17 +17,38 @@
           <label class="w-full font-semibold" for="location"
             >Pick-up date</label
           >
-          <VueDatePicker class="" v-model="pickupDate" />
+          <VueDatePicker
+            class=""
+            v-model="pickupDate"
+            disable-year-select
+            time-picker-inline
+            :start-time="startTime"
+            :enable-time-picker="false"
+            :min-date="new Date()"
+            auto-apply
+            :month-change-on-scroll="false"
+          />
         </div>
         <div class="w-full lg:w-1/4 px-2 py-5 lg:py-0">
           <label class="w-full font-semibold" for="location">Return date</label>
-          <VueDatePicker v-model="returnDate" />
+          <VueDatePicker
+            v-model="returnDate"
+            disable-year-select
+            time-picker-inline
+            :start-time="startTime"
+            :enable-time-picker="false"
+            :min-date="pickupDate"
+            auto-apply
+            :month-change-on-scroll="false"
+          />
         </div>
         <div
           class="w-full lg:w-1/4 text-center py-5 lg:py-0 flex items-center justify-center"
         >
           <button
-            class="w-2/3 px-5 py-2 bg-red-700 text-white font-semibold rounded-full hover:bg-red-500"
+            v-if="!pickupDate || !returnDate"
+            :disabled="!pickupDate || !returnDate"
+            class="w-2/3 px-5 py-2 bg-gray-700 text-white font-semibold rounded-full"
           >
             Search
           </button>
