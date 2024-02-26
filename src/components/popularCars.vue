@@ -87,36 +87,11 @@
             </button>
           </div>
         </div>
-        <!-- <div
-          v-if="fast"
-          v-for="car in popularSportCars"
-          class="bg-gray-900 p-5 lg:p-10 rounded-lg flex flex-col justify-between my-5 lg:my-0"
-        >
-          <img :src="car.img" alt="car-photo" class="object-cover mb-5" />
-          <div>
-            <p class="text-white font-bold text-lg text-center">
-              {{ car.name }}
-            </p>
-            <p class="text-green-600 text-center font-semilight text-md mb-5">
-              ${{ car.price }}USD /day
-            </p>
-            <div class="grid grid-cols-2">
-              <p class="text-white">Top Speed: {{ car.specs.topSpeed }}</p>
-              <p class="text-white">Hp: {{ car.specs.hp }}</p>
-              <p class="text-white">Traction: {{ car.specs.trans }}</p>
-              <p class="text-white">{{ car.specs.infotaiment }}</p>
-              <p class="text-white">Fuel: {{ car.specs.typeOfFuel }}</p>
-              <p class="text-white">Consumption: {{ car.specs.consumption }}</p>
-            </div>
-          </div>
-          <div class="text-center mt-5">
-            <button
-              class="px-5 py-2 bg-red-700 hover:bg-red-600 text-white rounded-full"
-            >
-              Rent Now
-            </button>
-          </div>
-        </div> -->
+      </div>
+      <div class="w-full text-center mt-10">
+        <router-link to="/cars">
+          <p class="underline">See All</p>
+        </router-link>
       </div>
     </div>
   </main>

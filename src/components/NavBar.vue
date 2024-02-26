@@ -1,7 +1,7 @@
 <template>
   <main>
     <div
-      class="w-full z-50 text-center px-40 flex justify-between fixed py-5 bg-stone-300"
+      class="w-full z-50 text-center px-40 flex fixed py-5 bg-stone-300 justify-center space-x-3"
     >
       <div v-for="route in routes" :key="route.route">
         <router-link :to="route.route">
@@ -26,15 +26,15 @@ const routes = [
   },
   {
     name: "Cars",
-    route: "/",
+    route: "/cars",
   },
-  {
-    name: "About",
-    route: "/",
-  },
-  {
-    name: "Login",
-    route: "/",
-  },
+  // {
+  //   name: "About",
+  //   route: "/",
+  // },
+  // {
+  //   name: "Login",
+  //   route: "/",
+  // },
 ];
 </script>

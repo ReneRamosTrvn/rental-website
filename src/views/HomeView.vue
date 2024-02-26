@@ -39,7 +39,7 @@ import Testimonials from "@/components/Testimonials.vue";
         <img src="/public/tiguan.png.png" alt="tiguan" class="object-cover" />
       </div>
     </div>
-    <Finder />
+    <Finder class="bg-stone-100 px-5 lg:px-10 py-20" />
     <Brands />
     <PopularCars />
     <Testimonials />

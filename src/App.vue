@@ -7,11 +7,13 @@
     "
   />
   <RouterView />
+  <Footer />
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
 import NavBar from "./components/NavBar.vue";
+import Footer from "./components/Footer.vue";
 
 const scrolledDown = ref(false);
 const scrolledUp = ref(true);
